@@ -1,0 +1,1 @@
+https://wiki.qt.io/Building_Qt_6_from_Git

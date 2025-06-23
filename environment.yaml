@@ -1,0 +1,6 @@
+name: pyqt-env
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pyqt=5
