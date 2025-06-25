@@ -1,6 +1,11 @@
 import sys
 import os
-from components import Resistor, VoltageSource, Component, CustomWire, Terminal
+
+from src.circuit import Terminal
+from components.components import Component
+from components.dc_voltage_source import dc_voltage_sorce
+from components.resisitor import Resistor
+from components.wire import Wire
 
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout,
@@ -33,7 +38,7 @@ class CustomGraphicsView(QGraphicsView):
         if len(terminals) != 2:
             print("Select exactly 2 terminals (Shift+Click).")
             return
-        wire = CustomWire(terminals[0], terminals[1])
+        wire = Wire(terminals[0], terminals[1])
         self.scene().addItem(wire)
         wire.addedToScene()  # <- call after adding to scene
         self.update_circuit_status()
@@ -112,7 +117,7 @@ class MainWindow(QWidget):
         self.scene.addItem(resistor)
 
     def add_voltage_source(self):
-        vs = VoltageSource()
+        vs = dc_voltage_sorce()
         vs.setPos(300, 150)
         self.scene.addItem(vs)
 
