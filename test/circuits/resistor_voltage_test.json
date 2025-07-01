@@ -1,0 +1,29 @@
+{
+  "test_1_loop": {
+    "node 0": {
+      "voltage_at_node": 0,
+      "components": {
+        "resistor": "100k",
+        "dc_voltage_source": {
+          "terminal": "-",
+          "dc_supply": 10
+        }
+      },
+      "connection": "node 1"
+    },
+    "node 1": {
+      "voltage_at_node": "unknown",
+      "components": {
+        "resistor": "100k",
+        "dc_voltage_source": {
+          "terminal": "+",
+          "dc_supply": 10
+        }
+      },
+      "connection": "node 0"
+    }
+  },
+  "test_2_loop": {
+
+  }
+}
