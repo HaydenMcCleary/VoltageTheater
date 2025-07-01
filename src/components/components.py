@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import (
 from PyQt5.QtGui import QPixmap, QPainter, QPen, QColor, QPainterPath
 from PyQt5.QtCore import Qt, QPointF, QRectF, QLineF
 
-from src.circuit import Terminal
+from src.gui.circuit import Terminal
         
 class Component(QGraphicsPixmapItem):
     def __init__(self, image_path, terminals, target_size=(60, 60)):

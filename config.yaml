@@ -1,0 +1,7 @@
+paths:
+  symbols: 
+    resistor: symbols/resistor.png
+    dc_volt_src: symbols/dc_voltage_source
+  files:
+
+  

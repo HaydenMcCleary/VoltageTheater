@@ -1,5 +1,5 @@
 # draws path between two nodes 
-from components.components import Component
+from src.components.components import Component
 
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout,

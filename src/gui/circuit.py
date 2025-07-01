@@ -1,7 +1,3 @@
-# nodes for parent component 
-
-
-
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout,
     QGraphicsView, QGraphicsScene, QGraphicsPixmapItem,
