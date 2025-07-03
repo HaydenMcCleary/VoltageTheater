@@ -1,0 +1,65 @@
+{
+    "test_1_loop": {
+        "nodes": {
+            "n0": { "voltage_at_node": 0 },
+            "n1": { "voltage_at_node": "unknown" }
+        },
+        "components": [
+            {
+                "type": "dc_voltage_source",
+                "voltage": 10,
+                "positive": "n1",
+                "negative": "n0"
+            },
+            {
+                "type": "resistor",
+                "value": "100",
+                "from": "n1",
+                "to": "n0"
+            }
+        ],
+        "expected_status": "closed"
+    },
+
+    "test_2_loop": {
+        "nodes": {
+            "n0": { "voltage_at_node": 0 },
+            "n1": { "voltage_at_node": "unknown" },
+            "n2": { "voltage_at_node": "unknown" },
+            "n3": { "voltage_at_node": "unknown" }
+        },
+        "components": [
+            {
+                "type": "dc_voltage_source",
+                "voltage": 10,
+                "positive": "n1",
+                "negative": "n0"
+            },
+            {
+                "type": "resistor",
+                "value": "50",
+                "from": "n1",
+                "to": "n2"
+            },
+            {
+                "type": "resistor",
+                "value": "20",
+                "from": "n2",
+                "to": "n0"
+            },
+            {
+                "type": "resistor",
+                "value": "10",
+                "from": "n1",
+                "to": "n3"
+            },
+            {
+                "type": "resistor",
+                "value": "10",
+                "from": "n3",
+                "to": "n0"
+            }
+        ],
+        "expected_status": "closed"
+    }
+}
